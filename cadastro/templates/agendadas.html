@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendadas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Visitas Agendadas</h1>
+    </div>
+
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <a href="/cadastrovisitas" class="btn btn-info">Voltar</a>
+    </div>
+
+
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <table class="table">
+  <thead class="thead-dark">
+    <tr>
+        <th scope="col">Data da Visita</th>
+      <th scope="col">Escola</th>
+      <th scope="col">Quem agendou</th>
+        <th scope="col">Opções</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for dbs in db %}
+        <tr>
+            <th>{{dbs.data_visita}}</th>
+            <th>{{dbs.nome_escola}}</th>
+            <th>{{dbs.responsavel_agendamento}}</th>
+
+
+            <td>
+            <a href="/view/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
+            <a href="/edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
+            <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+        </td>
+        </tr>
+        {% endfor %}
+            </tbody>
+    </table>
+    </div>
+
+<div class="pagination">
+        {% if db.has_previous %}
+            <a href="?page={{db.previous_page_number}}"> << </a>
+        {% endif %}
+        {{db.number}}
+        {% if db.has_next %}
+            <a href="?page={{db.next_page_number}}"> >> </a>
+        {% endif %}
+    </div>
+
+    {% load static %}
+    <script src="{% static 'javascript.js' %}"></script>
+
+</body>
+</html>

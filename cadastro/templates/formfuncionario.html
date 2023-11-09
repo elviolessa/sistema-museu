@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1> Agendamento </h1>
+    </div>
+
+<div class="col-8 m-auto pt-2 pb-2 text-center">
+        <a href="/" class="btn btn-info"> Voltar </a>
+    </div>
+
+<div class="col-8 m-auto pt-4 pb-2 text-center">
+        <!--{{form.as_p}}-->
+        <div id="result"></div>
+        <form name="formfuncionario" id="formfuncionario" action="/createfuncionario/" method="post">
+            {% csrf_token %}
+        <div class="form-group mt-4">Nome: {{formfuncionario.nome_funcionario}}</div>
+        <div class="form-group mt-4">CPF: {{formfuncionario.cpf}}</div>
+        <div class="form-group mt-4">Data de Nascimento: {{formfuncionario.data_nasc}}</div>
+            <input type="submit" class="btn btn=success" value="Salvar">
+        </form>
+    </div>
+
+</body>
+</html>
