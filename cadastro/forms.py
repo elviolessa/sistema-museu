@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from cadastro.models import AgendaVisita, Escola, Funcionario
+from cadastro.models import AgendaVisita, Escola, Funcionario, Peca
 
 
 class AgendaVisitaForm(ModelForm):
@@ -17,3 +17,8 @@ class FuncionarioForm(ModelForm):
     class Meta:
         model = Funcionario
         fields = ['nome_funcionario', 'cpf', 'data_nasc']
+
+class PecaForm(ModelForm):
+    class Meta:
+        model = Peca
+        fields = ['nome_peca', 'categoria', 'cor', 'tamanho', 'doador']

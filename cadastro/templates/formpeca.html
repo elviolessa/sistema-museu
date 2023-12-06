@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Visualização</title>
+    <title>Catalogação</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <style>
@@ -41,25 +41,26 @@
   </div>
 </nav>
 
-    <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1> Detalhes </h1>
+<div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1> Formulário de Catalogação </h1>
     </div>
 
-    <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <a href="/cadastrovisitas/agendadas" class="btn btn-outline-info"> Voltar </a>
+<div class="col-8 m-auto pt-2 pb-2 text-center">
+        <a href="/catalogacao" class="btn btn-outline-info"> Voltar </a>
     </div>
 
-    <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <strong>Data:</strong> {{db.data_visita}} <br>
-        <strong>Escola:</strong> {{db.nome_escola}} <br>
-        <strong>Funcionario:</strong> {{db.nome_funcionario}} <br>
-        <strong>Total Pessoas:</strong> {{db.qtd_pessoas}} <br>
-        <strong>Responsável:</strong> {{db.responsavel_agendamento}} <br>
-        <strong>Turma:</strong> {{db.turma}} <br>
-
-
-
-
+<div class="col-8 m-auto pt-4 pb-2 text-center">
+        <!--{{form.as_p}}-->
+        <div id="result"></div>
+        <form name="formpeca" id="formpeca" action="{% if db %}/updatepeca/{{db.id}}/{% else %}/createpeca/{% endif %}" method="post">
+            {% csrf_token %}
+        <div class="form-group mt-4">Nome: {{formpeca.nome_peca}}</div>
+        <div class="form-group mt-4">Categoria: {{formpeca.categoria}}</div>
+        <div class="form-group mt-4">Cor: {{formpeca.cor}}</div>
+            <div class="form-group mt-4">Tamanho: {{formpeca.tamanho}}</div>
+            <div class="form-group mt-4">Doador: {{formpeca.doador}}</div>
+            <input type="submit" class="btn btn-outline-success" value="Salvar">
+        </form>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

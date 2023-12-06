@@ -29,7 +29,7 @@ class AgendaVisita(models.Model):
     turma = models.CharField('Turma', max_length=45)
 
     def __str__(self):
-        return self.nome_escola
+        return self.data_visita
 
 
 class Escola(models.Model):
