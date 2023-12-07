@@ -2,10 +2,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Visualização</title>
+    <title>Museu</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <style>
+  <style>
     body{
       background-color: 	#FFB6C1
     }
@@ -25,45 +25,34 @@
         <a class="nav-link" href="/">Inicio</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/catalogacao/">Catalogação</a>
+        <a class="nav-link" href="catalogacao/">Catalogação</a>
       </li>
         <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Cadastro
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/formescola/">Escolas</a>
-          <a class="dropdown-item" href="/formfuncionario/">Funcionário</a>
-          <a class="dropdown-item" href="/cadastrovisitas/">Visitas</a>
+          <a class="dropdown-item" href="formescola/">Escolas</a>
+          <a class="dropdown-item" href="formfuncionario/">Funcionário</a>
+          <a class="dropdown-item" href="cadastrovisitas/">Visitas</a>
         </div>
       </li>
     </ul>
   </div>
 </nav>
+<br>
+<div align="center">
+  <h1>Erro 500</h1>
+<h1>OOps!Erro interno no servidor</h1>
+</div>
 
-    <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1> Detalhes </h1>
-    </div>
-
-    <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <a href="/cadastrovisitas/agendadas" class="btn btn-outline-info"> Voltar </a>
-    </div>
-
-    <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <strong>Data:</strong> {{db.data_visita}} <br>
-        <strong>Escola:</strong> {{db.nome_escola}} <br>
-        <strong>Funcionario:</strong> {{db.nome_funcionario}} <br>
-        <strong>Total Pessoas:</strong> {{db.qtd_pessoas}} <br>
-        <strong>Responsável:</strong> {{db.responsavel_agendamento}} <br>
-        <strong>Turma:</strong> {{db.turma}} <br>
-
-
-
-
+<div class="col-8 m-auto pt-2 pb-2 text-center">
+        <a href="/" class="btn btn-outline-info">Voltar ao inicio</a>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -5,3 +5,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('cadastro.urls')),
 ]
+
+handler404 = "cadastro.views.handler404"
+handler500 = "cadastro.views.handler500"
