@@ -26,7 +26,7 @@ SECRET_KEY = 's4w32n9%!c)lo!l_-_ipe=*rq+usx%xdfpse89w5ffk-2e)j5x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://mha1.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
