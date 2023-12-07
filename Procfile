@@ -1,1 +1,1 @@
-web: gunicorn museu.wsgi --log-file -
+web: gunicorn projetofinal.wsgi --log-file -
