@@ -1,0 +1,1 @@
+web: gunicorn museu.wsgi --log-file -
